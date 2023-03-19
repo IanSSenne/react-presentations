@@ -1,0 +1,30 @@
+{
+  "name": "@react-presentation/client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/loader.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "esbuild src/loader.dev.ts --bundle --outfile=dist/loader.js --minify --sourcemap --target=es2015 --platform=node --format=esm --external:vite --external:@vitejs/plugin-react && vite",
+    "build": "vite build && esbuild src/loader.prod.ts --bundle --outfile=dist/loader.js --minify --sourcemap --target=es2015 --platform=node --format=esm",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "esbuild": "^0.17.12",
+    "vite": "^4.2.0"
+  }
+}

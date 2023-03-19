@@ -1,0 +1,21 @@
+{
+  "name": "react-presentations",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "typescript": "^5.0.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn workspace @react-presentation/client dev\" \"yarn workspace @react-presentation/server dev\""
+  },
+  "dependencies": {
+    "@yarnpkg/pnpify": "^4.0.0-rc.40"
+  }
+}

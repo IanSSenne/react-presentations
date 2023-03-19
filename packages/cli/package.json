@@ -1,0 +1,9 @@
+{
+  "name": "@react-presentation/cli",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@react-presentation/server": "workspace:^"
+  }
+}
